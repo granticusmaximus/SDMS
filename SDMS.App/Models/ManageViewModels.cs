@@ -39,6 +39,20 @@ namespace SDMS.App.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class SetFullNameViewModel
+    {
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName
+        {
+            get; set;
+        }
+    }
+
     public class ChangePasswordViewModel
     {
         [Required]
