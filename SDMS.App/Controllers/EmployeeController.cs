@@ -21,6 +21,12 @@ namespace SDMS.App.Controllers
             return View(employees);
         }
 
+        // Get  
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(Employee employee)
         {

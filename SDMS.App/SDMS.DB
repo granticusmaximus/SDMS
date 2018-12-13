@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=C:\Users\Grant\source\repos\SDMS\SDMS.App\App_Data\aspnet-SDMS.App-20181211104035.mdf;Initial Catalog=aspnet-SDMS.App-20181211104035;Integrated Security=True" Category="Database" Group="Expanded" />
+    <Node Id="dbo" Label="dbo" Category="Schema" Group="Expanded" />
+    <Node Id="dbo.__MigrationHistory" Label="dbo.__MigrationHistory" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.__MigrationHistory_MigrationId" Label="MigrationId" Category="Field Primary" Description="nvarchar(150)" />
+    <Node Id="dbo.__MigrationHistory_ContextKey" Label="ContextKey" Category="Field Primary" Description="nvarchar(300)" />
+    <Node Id="dbo.__MigrationHistory_Model" Label="Model" Category="Field" Description="image" />
+    <Node Id="dbo.__MigrationHistory_ProductVersion" Label="ProductVersion" Category="Field" Description="nvarchar(32)" />
+    <Node Id="dbo.AspNetRoles" Label="dbo.AspNetRoles" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.AspNetRoles_Id" Label="Id" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetRoles_Name" Label="Name" Category="Field" Description="nvarchar(256)" />
+    <Node Id="dbo.AspNetUserClaims" Label="dbo.AspNetUserClaims" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.AspNetUserClaims_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="dbo.AspNetUserClaims_UserId" Label="UserId" Category="Field Foreign" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUserClaims_ClaimType" Label="ClaimType" Category="Field Optional" Description="ntext" />
+    <Node Id="dbo.AspNetUserClaims_ClaimValue" Label="ClaimValue" Category="Field Optional" Description="ntext" />
+    <Node Id="dbo.AspNetUserLogins" Label="dbo.AspNetUserLogins" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.AspNetUserLogins_LoginProvider" Label="LoginProvider" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUserLogins_ProviderKey" Label="ProviderKey" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUserLogins_UserId" Label="UserId" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUserRoles" Label="dbo.AspNetUserRoles" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.AspNetUserRoles_UserId" Label="UserId" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUserRoles_RoleId" Label="RoleId" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUsers" Label="dbo.AspNetUsers" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.AspNetUsers_Id" Label="Id" Category="Field Primary" Description="nvarchar(128)" />
+    <Node Id="dbo.AspNetUsers_Email" Label="Email" Category="Field Optional" Description="nvarchar(256)" />
+    <Node Id="dbo.AspNetUsers_EmailConfirmed" Label="EmailConfirmed" Category="Field" Description="bit" />
+    <Node Id="dbo.AspNetUsers_PasswordHash" Label="PasswordHash" Category="Field Optional" Description="ntext" />
+    <Node Id="dbo.AspNetUsers_SecurityStamp" Label="SecurityStamp" Category="Field Optional" Description="ntext" />
+    <Node Id="dbo.AspNetUsers_PhoneNumber" Label="PhoneNumber" Category="Field Optional" Description="ntext" />
+    <Node Id="dbo.AspNetUsers_PhoneNumberConfirmed" Label="PhoneNumberConfirmed" Category="Field" Description="bit" />
+    <Node Id="dbo.AspNetUsers_TwoFactorEnabled" Label="TwoFactorEnabled" Category="Field" Description="bit" />
+    <Node Id="dbo.AspNetUsers_LockoutEndDateUtc" Label="LockoutEndDateUtc" Category="Field Optional" Description="datetime" />
+    <Node Id="dbo.AspNetUsers_LockoutEnabled" Label="LockoutEnabled" Category="Field" Description="bit" />
+    <Node Id="dbo.AspNetUsers_AccessFailedCount" Label="AccessFailedCount" Category="Field" Description="int" />
+    <Node Id="dbo.AspNetUsers_UserName" Label="UserName" Category="Field" Description="nvarchar(256)" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="dbo" Category="Contains" />
+    <Link Source="dbo" Target="dbo.__MigrationHistory" Category="Contains" />
+    <Link Source="dbo.__MigrationHistory" Target="dbo.__MigrationHistory_MigrationId" Category="Contains" />
+    <Link Source="dbo.__MigrationHistory" Target="dbo.__MigrationHistory_ContextKey" Category="Contains" />
+    <Link Source="dbo.__MigrationHistory" Target="dbo.__MigrationHistory_Model" Category="Contains" />
+    <Link Source="dbo.__MigrationHistory" Target="dbo.__MigrationHistory_ProductVersion" Category="Contains" />
+    <Link Source="dbo" Target="dbo.AspNetRoles" Category="Contains" />
+    <Link Source="dbo.AspNetRoles" Target="dbo.AspNetRoles_Id" Category="Contains" />
+    <Link Source="dbo.AspNetRoles" Target="dbo.AspNetRoles_Name" Category="Contains" />
+    <Link Source="dbo" Target="dbo.AspNetUserClaims" Category="Contains" />
+    <Link Source="dbo.AspNetUserClaims" Target="dbo.AspNetUserClaims_Id" Category="Contains" />
+    <Link Source="dbo.AspNetUserClaims" Target="dbo.AspNetUserClaims_UserId" Category="Contains" />
+    <Link Source="dbo.AspNetUserClaims" Target="dbo.AspNetUserClaims_ClaimType" Category="Contains" />
+    <Link Source="dbo.AspNetUserClaims" Target="dbo.AspNetUserClaims_ClaimValue" Category="Contains" />
+    <Link Source="dbo.AspNetUserClaims_UserId" Target="dbo.AspNetUsers_Id" Label="FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId" Category="Foreign Key" />
+    <Link Source="dbo" Target="dbo.AspNetUserLogins" Category="Contains" />
+    <Link Source="dbo.AspNetUserLogins" Target="dbo.AspNetUserLogins_LoginProvider" Category="Contains" />
+    <Link Source="dbo.AspNetUserLogins" Target="dbo.AspNetUserLogins_ProviderKey" Category="Contains" />
+    <Link Source="dbo.AspNetUserLogins" Target="dbo.AspNetUserLogins_UserId" Category="Contains" />
+    <Link Source="dbo.AspNetUserLogins_UserId" Target="dbo.AspNetUsers_Id" Label="FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId" Category="Foreign Key" />
+    <Link Source="dbo" Target="dbo.AspNetUserRoles" Category="Contains" />
+    <Link Source="dbo.AspNetUserRoles" Target="dbo.AspNetUserRoles_UserId" Category="Contains" />
+    <Link Source="dbo.AspNetUserRoles" Target="dbo.AspNetUserRoles_RoleId" Category="Contains" />
+    <Link Source="dbo.AspNetUserRoles_RoleId" Target="dbo.AspNetRoles_Id" Label="FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId" Category="Foreign Key" />
+    <Link Source="dbo.AspNetUserRoles_UserId" Target="dbo.AspNetUsers_Id" Label="FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId" Category="Foreign Key" />
+    <Link Source="dbo" Target="dbo.AspNetUsers" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_Id" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_Email" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_EmailConfirmed" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_PasswordHash" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_SecurityStamp" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_PhoneNumber" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_PhoneNumberConfirmed" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_TwoFactorEnabled" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_LockoutEndDateUtc" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_LockoutEnabled" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_AccessFailedCount" Category="Contains" />
+    <Link Source="dbo.AspNetUsers" Target="dbo.AspNetUsers_UserName" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
