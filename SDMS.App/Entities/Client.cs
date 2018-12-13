@@ -8,6 +8,9 @@ namespace SDMS.App.Entities
 {
     public class Client
     {
+        [Key]
+        public int CID { get; set; }
+
         [Required]
         [Display(Name = "POC Name")]
         public string POCName { get; set; }

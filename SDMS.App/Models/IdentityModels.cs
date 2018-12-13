@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using SDMS.App.Entities;
 
 namespace SDMS.App.Models
 {
@@ -29,5 +30,8 @@ namespace SDMS.App.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
