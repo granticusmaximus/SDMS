@@ -24,27 +24,33 @@
         <th>
             @Html.DisplayNameFor(x => x.Addres)
         </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Notes)
+        </th>
     </tr>
     @foreach (var emp in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(x => emp.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(x => emp.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(x => emp.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(x => emp.Addres)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = emp.EmployeeId }) |
-                @Html.ActionLink("Detail", "Detail", new { id = emp.EmployeeId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = emp.EmployeeId })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(x => emp.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(x => emp.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(x => emp.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(x => emp.Addres)
+        </td>
+        <td>
+            @Html.DisplayFor(x => emp.Notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = emp.EmployeeId }) |
+            @Html.ActionLink("Detail", "Detail", new { id = emp.EmployeeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = emp.EmployeeId })
+        </td>
+    </tr>
     }
 </table> 

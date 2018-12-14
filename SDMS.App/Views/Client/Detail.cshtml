@@ -1,0 +1,66 @@
+﻿@model SDMS.App.Entities.Client
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.POCName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POCName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POCPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POCPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POCEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POCEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

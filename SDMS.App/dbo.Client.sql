@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Client]
+(
+	[CID] INT NOT NULL PRIMARY KEY, 
+    [POCName] NVARCHAR(50) NOT NULL, 
+    [POCPhone] NVARCHAR(50) NOT NULL, 
+    [POCEmail] NVARCHAR(50) NOT NULL, 
+    [BName] NVARCHAR(50) NOT NULL, 
+    [BPhone] NVARCHAR(50) NOT NULL
+)

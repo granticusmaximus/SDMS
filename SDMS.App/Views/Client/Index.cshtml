@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SDMS.App.Entities.Client>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(x => x.POCName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.POCPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.POCEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.BName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.BPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.BPhone)
+        </th>
+    </tr>
+    @foreach (var cli in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(x => cli.POCName)
+        </td>
+        <td>
+            @Html.DisplayFor(x => cli.POCPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(x => cli.POCEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(x => cli.BName)
+        </td>
+        <td>
+            @Html.DisplayFor(x => cli.BPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(x => cli.Notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = cli.CID }) |
+            @Html.ActionLink("Detail", "Detail", new { id = cli.CID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = cli.CID })
+        </td>
+    </tr>
+    }
+</table> 

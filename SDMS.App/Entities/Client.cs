@@ -31,5 +31,8 @@ namespace SDMS.App.Entities
         [Required]
         [Display(Name = "Business Phone")]
         public string BPhone { get; set; }
+
+        [Display(Name = "Notes")]
+        public string Notes { get; set; }
     }
 }
